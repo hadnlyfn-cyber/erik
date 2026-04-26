@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>ERIK BARBER</title>
+    <meta
+      name="description"
+      content="ERIK BARBER — персональный сайт барбера: запись, отзывы, галерея работ, дипломы и бонусная программа."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="page-noise"></div>
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-lockup__eyebrow">fashion barber</span>
+          <span class="brand-lockup__name">ERIK BARBER</span>
+        </div>
+        <div class="topbar__actions">
+          <button class="ghost-button" type="button" data-open="reviews-panel">Отзывы</button>
+          <button class="ghost-button" type="button" data-open="account-panel">Кабинет</button>
+        </div>
+      </header>
+
+      <main class="hero-screen" id="hero">
+        <section class="hero-copy">
+          <div class="hero-copy__meta">
+            <span class="meta-pill">18 лет</span>
+            <span class="meta-pill">2 года опыта</span>
+            <span class="meta-pill">мужской барбер</span>
+          </div>
+          <p class="hero-copy__lead">Строгий современный образ, собранный как fashion-портрет, а не как обычный салонный лендинг.</p>
+          <h1>Эрик — персональный барбер с акцентом на стиль, чистую форму и уверенную подачу.</h1>
+          <p class="hero-copy__description">
+            Индивидуальная запись, личный кабинет, бонусы за визиты, магазин наград и современный визуальный стиль.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="https://n2154738.yclients.com" target="_blank" rel="noreferrer">Записаться на стрижку</a>
+            <button class="secondary-button" type="button" data-open="works-panel">Посмотреть работы мастера</button>
+            <button class="secondary-button" type="button" data-open="diplomas-panel">Дипломы</button>
+            <button class="secondary-button" type="button" data-open="shop-panel">Магазин за бонусы</button>
+          </div>
+
+          <div class="hero-note">
+            <strong>500 бонусов</strong> начисляются после визита, когда в системе установлен статус
+            <span class="hero-note__status">«Клиент пришел»</span>.
+          </div>
+        </section>
+
+        <section class="hero-visual" aria-label="Фотография мастера">
+          <div class="hero-visual__frame">
+            <img src="assets/images/master.jpg" alt="Эрик, мастер барбер" />
+            <div class="hero-visual__badge">
+              <span>ERIK</span>
+              <span>BARBER</span>
+            </div>
+          </div>
+          <div class="hero-visual__caption">
+            <span>Личный бренд</span>
+            <span>запись через YCLIENTS</span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <aside class="panel" id="works-panel" aria-hidden="true">
+      <div class="panel__backdrop" data-close></div>
+      <section class="panel__content">
+        <header class="panel__header">
+          <div>
+            <span class="panel__eyebrow">галерея</span>
+            <h2>Работы мастера</h2>
+          </div>
+          <button class="panel__close" type="button" data-close>Закрыть</button>
+        </header>
+        <p class="panel__intro">Блок уже готов под реальные фотографии. Пока стоят стильные карточки-заглушки, которые легко заменить на `work1.jpg`, `work2.jpg` и далее.</p>
+        <div class="gallery-grid" id="works-grid"></div>
+      </section>
+    </aside>
+
+    <aside class="panel" id="diplomas-panel" aria-hidden="true">
+      <div class="panel__backdrop" data-close></div>
+      <section class="panel__content">
+        <header class="panel__header">
+          <div>
+            <span class="panel__eyebrow">достижения</span>
+            <h2>Дипломы и обучение</h2>
+          </div>
+          <button class="panel__close" type="button" data-close>Закрыть</button>
+        </header>
+        <p class="panel__intro">Когда загрузишь дипломы, этот экран будет выглядеть как аккуратная fashion-галерея сертификатов.</p>
+        <div class="gallery-grid" id="diplomas-grid"></div>
+      </section>
+    </aside>
+
+    <aside class="panel" id="shop-panel" aria-hidden="true">
+      <div class="panel__backdrop" data-close></div>
+      <section class="panel__content">
+        <header class="panel__header">
+          <div>
+            <span class="panel__eyebrow">loyalty store</span>
+            <h2>Магазин за бонусы</h2>
+          </div>
+          <button class="panel__close" type="button" data-close>Закрыть</button>
+        </header>
+        <div class="panel__stats">
+          <article class="stat-card">
+            <span class="stat-card__label">Доступно бонусов</span>
+            <strong class="stat-card__value" data-bonus-balance>0</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">После каждого визита</span>
+            <strong class="stat-card__value">+500</strong>
+          </article>
+        </div>
+        <div class="shop-grid" id="shop-grid"></div>
+      </section>
+    </aside>
+
+    <aside class="panel" id="reviews-panel" aria-hidden="true">
+      <div class="panel__backdrop" data-close></div>
+      <section class="panel__content">
+        <header class="panel__header">
+          <div>
+            <span class="panel__eyebrow">social proof</span>
+            <h2>Отзывы клиентов</h2>
+          </div>
+          <button class="panel__close" type="button" data-close>Закрыть</button>
+        </header>
+        <div class="review-layout">
+          <div class="review-column">
+            <p class="panel__intro">На старте я заложил демо-отзывы, а клиент может оставить свой отзыв прямо на сайте из личного кабинета.</p>
+            <div class="review-grid" id="reviews-grid"></div>
+          </div>
+          <div class="review-form-card">
+            <h3>Оставить отзыв</h3>
+            <p>Если профиль уже зарегистрирован, отзыв подтянется к имени клиента автоматически.</p>
+            <form id="review-form" class="stack-form">
+              <label>
+                <span>Имя</span>
+                <input type="text" name="author" placeholder="Как к вам обращаться" />
+              </label>
+              <label>
+                <span>Оценка</span>
+                <select name="rating">
+                  <option value="5">5 / 5</option>
+                  <option value="4">4 / 5</option>
+                </select>
+              </label>
+              <label>
+                <span>Отзыв</span>
+                <textarea name="text" rows="5" placeholder="Напишите пару слов о визите"></textarea>
+              </label>
+              <button class="primary-button primary-button--full" type="submit">Отправить отзыв</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <aside class="panel" id="account-panel" aria-hidden="true">
+      <div class="panel__backdrop" data-close></div>
+      <section class="panel__content">
+        <header class="panel__header">
+          <div>
+            <span class="panel__eyebrow">personal area</span>
+            <h2>Личный кабинет</h2>
+          </div>
+          <button class="panel__close" type="button" data-close>Закрыть</button>
+        </header>
+        <div class="account-layout">
+          <section class="account-card" id="account-summary"></section>
+          <section class="account-card">
+            <div class="account-card__header">
+              <h3>История начислений и списаний</h3>
+              <button class="ghost-button ghost-button--small" type="button" id="seed-visit-button">Демо: начислить 500</button>
+            </div>
+            <div class="event-list" id="event-list"></div>
+          </section>
+          <section class="account-card">
+            <div class="account-card__header">
+              <h3>Запросы мастеру</h3>
+            </div>
+            <div class="request-list" id="request-list"></div>
+          </section>
+        </div>
+      </section>
+    </aside>
+
+    <div class="modal is-visible" id="registration-modal" role="dialog" aria-modal="true" aria-labelledby="registration-title">
+      <div class="modal__backdrop"></div>
+      <section class="modal__content">
+        <span class="modal__eyebrow">бонусная программа</span>
+        <h2 id="registration-title">Зарегистрируйтесь, чтобы бонусы сохранялись</h2>
+        <p>
+          После каждого подтвержденного визита начисляется <strong>500 бонусов</strong>. Профиль нужен, чтобы сохранять баланс,
+          историю наград и заявки в магазин.
+        </p>
+        <form id="registration-form" class="stack-form">
+          <label>
+            <span>Имя</span>
+            <input type="text" name="name" placeholder="Например, Артем" required />
+          </label>
+          <label>
+            <span>Телефон</span>
+            <input type="tel" name="phone" placeholder="+7 (999) 123-45-67" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="name@email.com" required />
+          </label>
+          <button class="primary-button primary-button--full" type="submit">Создать кабинет</button>
+        </form>
+        <button class="ghost-button ghost-button--small" type="button" id="dismiss-registration">Позже</button>
+      </section>
+    </div>
+
+    <div class="toast-stack" id="toast-stack" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+  </html>
